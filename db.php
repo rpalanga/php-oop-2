@@ -1,4 +1,9 @@
 <?php
 
-require './Models/Product.php'
+require './Models/Product.php';
 
+
+
+$products[
+
+];
