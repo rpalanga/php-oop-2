@@ -21,18 +21,22 @@ require './db.php'
             <h1 class="text-center display-1 fw-bolder"> Animal Shop </h1>
 
             <div class="row">
-                <div class="col-3">
+                <?php foreach($products as $Product) { ?>
+                <div class="col-3 d-flex gap-2 ">
 
                     <div class="card" style="width: 18rem;">
                         <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title"><?= $Product->name ?></h5>
+                            <p class="card-text"><?= $Product->descritpion ?></p>
+                            <p class="card-text"> Prezzo: <?= $Product->price ?></p>
+
                             
                         </div>
                     </div>
 
                 </div>
+                <?php } ?>
                 <div class="col-3">
 
                 </div>

@@ -1,8 +1,8 @@
 <?php
 
-require './Food.php';
-require './Game.php';
-require './Kennel.php';
+// require './Food.php';
+// require './Game.php';
+// require './Kennel.php';
 
 class Product{
     public $name;
