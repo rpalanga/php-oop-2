@@ -21,21 +21,40 @@ require './db.php'
             <h1 class="text-center display-1 fw-bolder"> Animal Shop </h1>
 
             <div class="row">
-                <?php foreach($products as $Product) { ?>
-                <div class="col-3 d-flex gap-2 ">
+                <?php foreach ($products as $Product) { ?>
+                    <div class="col-3 d-flex gap-2 ">
 
-                    <div class="card" style="width: 18rem;">
-                        <img src="<?= $Product->image ?>" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $Product->name ?></h5>
-                            <p class="card-text"><?= $Product->descritpion ?></p>
-                            <p class="card-text"> Prezzo: <?= $Product->price ?></p>
+                        <div class="card" style="width: 18rem;">
+                            <img src="<?= $Product->image ?>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $Product->name ?></h5>
+                                <p class="card-text"> Descrizione: <?= $Product->descritpion ?></p>
+                                <p class="card-text"> Prezzo: <?= $Product->price ?></p>
+                                <p class="card-text"> Per il tuo <strong> <?php echo $Product->category->getAnimal() ?></strong></p>
+                                <?php
 
-                            
+                                if ($Product instanceof Food) {
+                                    echo "<p class='card-text'> Scadenza: " . $Product->expiration . "</p>";
+                                    echo "<p class='card-text'> Peso: " . $Product->weight . "</p>";
+                                    echo "<p class='card-text'> Sapore: " . $Product->flevor . "</p>";
+                                } elseif ($Product instanceof Kennel) {
+                                    echo "<p class='card-text'> Durata: " . $Product->durabilty . "</p>";
+                                    echo "<p class='card-text'> Materiale: " . $Product->material . "</p>";
+                                    echo "<p class='card-text'> Peso massimo: " . $Product->weight . "</p>";
+                                } else {
+                                    // per i Game 
+                                    echo "<p class='card-text'> Durata: " . $Product->durabilty . "</p>";
+                                    echo "<p class='card-text'> Materiale: " . $Product->material . "</p>";
+                                }
+
+
+
+
+                                ?>
+                            </div>
                         </div>
-                    </div>
 
-                </div>
+                    </div>
                 <?php } ?>
                 <div class="col-3">
 
@@ -54,3 +73,5 @@ require './db.php'
 </body>
 
 </html>
+
+

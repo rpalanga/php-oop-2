@@ -9,6 +9,7 @@ class Product{
     public $image;
     public $descritpion;
     public $price;
+    public $category;
         
     /**
      * __construct

@@ -7,4 +7,8 @@ class Category{
     {
         $this->name = $_name;
     }
+
+    function getAnimal(){
+        return $this->name;
+    }
 }
