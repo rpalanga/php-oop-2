@@ -25,7 +25,7 @@ require './db.php'
                 <div class="col-3 d-flex gap-2 ">
 
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="<?= $Product->image ?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"><?= $Product->name ?></h5>
                             <p class="card-text"><?= $Product->descritpion ?></p>

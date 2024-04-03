@@ -4,11 +4,18 @@ require './Models/Product.php';
 require './Models/Kennel.php';
 require './Models/Food.php';
 require './Models/Game.php';
+require './Models/Category.php';
 
-$product1 = new Product('Cuccia','Spaziosa accogliente calda anche per esterni', 100.00);
-$product2 = new Product('Collare','Collare regolabile in pelle con borchie, resistente e sicuro.', 10.00);
-$product3 = new Product('Croccantini','Nutrienti e ricchi di vitamine', 50.00);
-$product4 = new Product('Pallina','Materiale resistente agli urti ai graffi e morsi', 15.00);
+$product1 = new Kennel('Cuccia','Spaziosa accogliente calda anche per esterni', 'https://best5.it/b5/wp-content/uploads/2018/03/Cibo-per-animali4-800x400.jpg', 100.00 , '4-anni', 'wood', '30kg');
+
+
+
+$product2 = new Game('Collare','Collare regolabile in pelle con borchie, resistente e sicuro.' , 'https://best5.it/b5/wp-content/uploads/2018/03/Cibo-per-animali4-800x400.jpg', 10.00, '2-anni','Plastic');
+
+$product3 = new Food('Croccantini','Nutrienti e ricchi di vitamine' , 'https://best5.it/b5/wp-content/uploads/2018/03/Cibo-per-animali4-800x400.jpg', 50.00, '20/10/2030', '3kg', 'Tropical');
+
+$product4 = new Game('Pallina','Materiale resistente agli urti ai graffi e morsi' , 'https://best5.it/b5/wp-content/uploads/2018/03/Cibo-per-animali4-800x400.jpg', 15.00 , '5-anni', 'Plastic');
+
 
 $products = [
     $product1,

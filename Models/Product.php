@@ -18,10 +18,10 @@ class Product{
      * @param  number $_price
      * @return void
      */
-    function __construct($_name,  $_description, $_price)
+    function __construct($_name,  $_description, $_image, $_price)
     {
         $this->name = $_name;
-        // $this->image = $_image;
+        $this->image = $_image;
         $this->descritpion = $_description;
         $this->price = $_price;
     }
