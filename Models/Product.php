@@ -16,7 +16,7 @@ class Product{
      *
      * @param  string $_name
      * @param  string $_description
-     * @param  number $_price
+     * @param  float $_price
      * @return void
      */
     function __construct($_name,  $_description, $_image, $_price)
@@ -24,7 +24,15 @@ class Product{
         $this->name = $_name;
         $this->image = $_image;
         $this->descritpion = $_description;
-        $this->price = $_price;
+
+        if(is_numeric($_price)){
+            
+            $this->price = $_price;
+
+        }else{
+            
+            throw new Exception("Il prezzo inserito non è un numero");
+        }
     }
 
     
