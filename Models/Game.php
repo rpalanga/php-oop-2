@@ -1,9 +1,10 @@
 <?php
 
+require_once __DIR__ . '/Traits/Composition.php';
+
 class Game extends Product{
 
-    public $durabilty;
-    public $material;
+    use Composition;
     
 
     function __construct($_name,  $_description, $_image, $_price, $_durabilty, $_material)

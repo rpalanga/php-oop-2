@@ -1,12 +1,15 @@
 <?php
 
+require_once __DIR__ . '/Traits/Composition.php';
+
 class Kennel extends Product{
 
-    public $weight;
-    public $durabilty;
-    public $material;
+    use Composition;
 
-    function __construct($_name,  $_description, $_image, $_price, $_durabilty, $_material, $_weight)
+    public $weight;
+    
+
+    function __construct($_name,  $_description, $_image, $_price, $_weight, $_durabilty, $_material)
     {
         parent::__construct($_name,  $_description, $_image, $_price);
         
