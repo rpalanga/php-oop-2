@@ -1,6 +1,8 @@
 <?php
 
-require './db.php'
+require './db.php';
+
+
 
 
     ?>
@@ -20,6 +22,8 @@ require './db.php'
     <div class="container-fluid">
         <div class="container my-4">
             <h1 class="text-center display-1 fw-bolder"> Animal Shop </h1>
+
+            
 
             <div class="row">
                 <?php foreach ($products as $Product) { ?>
